@@ -1,0 +1,52 @@
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font: 1rem "Helvetica", sans-serif;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  position: relative;
+  width: 300px;
+  height: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 99px;
+}
+.loader::before {
+  content: "";
+  border-radius: 99px;
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 128, 0), rgb(255, 255, 0), rgb(0, 255, 0), rgb(0, 0, 255), rgb(128, 0, 255), rgb(255, 0, 0), rgb(255, 128, 0), rgb(255, 255, 0), rgb(0, 255, 0), rgb(0, 0, 255), rgb(128, 0, 255), rgb(255, 0, 0));
+  background-size: 500%;
+  animation: loader 20s linear infinite;
+}
+.loader::after {
+  content: "";
+  border-radius: 99px;
+  position: absolute;
+  inset: -5px;
+  background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 128, 0), rgb(255, 255, 0), rgb(0, 255, 0), rgb(0, 0, 255), rgb(128, 0, 255), rgb(255, 0, 0), rgb(255, 128, 0), rgb(255, 255, 0), rgb(0, 255, 0), rgb(0, 0, 255), rgb(128, 0, 255), rgb(255, 0, 0));
+  background-size: 500%;
+  filter: blur(15px);
+  animation: loader 20s linear infinite;
+}
+@keyframes loader {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500% 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
